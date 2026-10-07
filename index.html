@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>Цветовые модели — лабораторная работа № 1</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="Лабораторная работа 1, начало страницы">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>COLOR<span class="brand-dot">.</span>LAB <small>№ 01</small></span>
+      </a>
+      <span class="header-caption">ИНТЕРАКТИВНАЯ ЛАБОРАТОРНАЯ РАБОТА</span>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="eyebrow"><span class="eyebrow-line"></span>ЦВЕТОВЫЕ МОДЕЛИ / ПРАКТИКА</div>
+        <div class="intro-row">
+          <div>
+            <h1 id="page-title">Один цвет.<br><em>Три способа описать.</em></h1>
+          </div>
+          <div class="variant-panel">
+            <div class="segmented" role="group" aria-label="Цветовая модель">
+              <button type="button" id="variant-even" class="variant-button active" aria-pressed="true"><strong>HSV</strong></button>
+              <button type="button" id="variant-odd" class="variant-button" aria-pressed="false"><strong>HLS</strong></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="workbench" aria-label="Рабочая область">
+        <div class="preview" id="preview">
+          <div class="preview-top"><span class="preview-kicker">ТЕКУЩИЙ ЦВЕТ</span></div>
+          <div class="preview-center">
+            <span class="preview-label">Ваш оттенок</span>
+            <div class="hex-row"><span id="hex-value">#7C5CFA</span><button type="button" id="copy-hex" class="copy-button" title="Скопировать HEX" aria-label="Скопировать HEX">⧉</button></div>
+            <span id="copy-message" class="copy-message" role="status" aria-live="polite">Нажмите, чтобы скопировать код</span>
+          </div>
+          <div class="preview-bottom"><span>RGB · CMYK · <span id="preview-third">HSV</span></span><span class="preview-spark" aria-hidden="true">✳</span></div>
+        </div>
+
+        <div class="controls-heading">
+          <div><div class="eyebrow small"><span class="eyebrow-line"></span>НАСТРОЙКА ЦВЕТА</div><h2>Меняйте как удобно</h2></div>
+          <p>Точное число, ползунок или палитра — в каждом блоке.</p>
+        </div>
+        <div id="model-cards" class="model-grid"></div>
+        <p id="error-message" class="error-message" role="alert" hidden></p>
+        <section class="calculation" aria-labelledby="calculation-title">
+          <div>
+            <span class="eyebrow small"><span class="eyebrow-line"></span>КАК РАССЧИТАН ЦВЕТ</span>
+            <h2 id="calculation-title">Из RGB в другие модели</h2>
+            <p id="calculation-note"></p>
+          </div>
+          <pre id="calculation-formula"></pre>
+        </section>
+      </section>
+
+    </main>
+    <footer><span>ЛАБОРАТОРНАЯ РАБОТА № 1</span><span>ЦВЕТОВЫЕ МОДЕЛИ · RGB / CMYK / HSV / HLS</span></footer>
+  </div>
+</body>
+</html>
